@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import BooksCatalog from "./components/BooksCatalog";
+import BookList from "./components/BookList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface IAppAppProps {
+  item: string;
 }
+
+interface Book {
+  id: number;
+  title: string;
+}
+
+const App: React.FC<IAppAppProps> = ({ item }) => {
+  const [bookList, setBookList] = useState<Array<Book>>([]);
+
+  //Add books to the list
+
+  const addToBookList = (book: any) => {
+    setBookList([...bookList, book]);
+  };
+
+  //Delete books
+
+  const handleDeleteBook = (bookId: any) => {
+    setBookList(bookList.filter((book) => book.id !== bookId));
+  };
+
+  return (
+    <>
+      <Header />
+      <BooksCatalog item={item} addToBookList={addToBookList} />
+      <BookList books={bookList} onDeleteBook={handleDeleteBook} />
+    </>
+  );
+};
 
 export default App;
