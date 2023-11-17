@@ -1,52 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
 /*Hero*/
 
-  .image-hero {
-    position: relative;
-    display: block;
-    width: 1920px;
-    height: 970px;
-    object-fit: cover;
-    max-width: 100%;
-  }
+.image-hero {
+  position: relative;
+  display: block;
+  width: 1920px;
+  height: 970px;
+  object-fit: cover;
+  max-width: 100%;
+}
 
-  .hero {
-    position: relative;
-    text-align: center;
-  }
-  
-  .header {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .button {
-    background-color: #7a0606;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 2rem;
-    padding: 10px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
-  
-  .button:hover {
-    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
+.hero {
+  position: relative;
+  text-align: center;
+}
 
-  /*NAVBAR*/
+.header {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  background-color: #7a0606;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*NAVBAR*/
 
 .logo {
   margin-left: 1rem;
@@ -87,120 +87,88 @@
 
 /*CARDS*/
 
-.title{
-  color: white;
+.title {
+  color: #ffffff;
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .card-container {
-  margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 }
 
 .card {
-  /*background-color: #ffffff;
-  width: 200px;
-  height: 400px;
-  margin-right: 4rem;
-  margin-bottom: 4rem;*/
-  display: flex;
   background-color: #ffffff;
   width: 200px;
-  height: 400px;
-  margin: 1.5rem;
-  position: relative;
-  border-radius: 12px;
+  margin: 1rem;
+  border-radius: 10px;
   overflow: hidden;
-  border: none;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-
-.card:hover{
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05, 1.05);
-  opacity: 0.7;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  -ms-transition: opacity 500ms;
-  transition: opacity 500ms;
+.card:hover {
+  transform: scale(1.05);
 }
-
 
 .image-container {
-  width: fit-content;
-  height: 85px;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  align-items: center;
-  
 }
 
-.image{
-  width: 200px;
-  height: 250px;
-}
-
-/*.image-container .card-title{
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-1;
-  padding:10px;
-  margin:0;
-}*/
-
-
-.card-title h2 {
+.card-content {
+  padding: 1rem;
   text-align: center;
-  margin-top: 12rem;
-  font-size: 1rem;
-  color: #000000;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  max-height: 2.1rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 .button-card {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
   background-color: #7a0606;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-top: 1rem;
-  width: 160px;
-  height: 60px;
-  border: none;
   color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-card:hover {
+  background-color: #5a0404;
 }
 
 /*Book List*/
 
 .book-list-container {
- color: white;
- text-align: center;
- height: 400px;
- margin-top: 15rem;
- color: white;
- margin: 0 auto;
- padding: 20px;
+  color: white;
+  text-align: center;
+  height: 400px;
+  margin-top: 15rem;
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-.book-list-title{
-  margin-top: 4rem;
-}
-¡
 
 .book-list-title {
+  margin-top: 4rem;
+}
+¡ .book-list-title {
   font-size: 2rem;
   margin-bottom: 50px;
 }

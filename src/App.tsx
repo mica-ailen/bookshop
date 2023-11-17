@@ -31,9 +31,25 @@ const App: React.FC<IAppAppProps> = ({ item }) => {
 
   return (
     <>
-      <Header />
-      <BooksCatalog item={item} addToBookList={addToBookList} />
-      <BookList books={bookList} onDeleteBook={handleDeleteBook} />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/booklist"
+            element={
+              <BookList books={bookList} onDeleteBook={handleDeleteBook} />
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <>
+                <Header />
+                <BooksCatalog item={item} addToBookList={addToBookList} />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
